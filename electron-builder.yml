@@ -1,5 +1,5 @@
 appId: com.electron.app
-productName: electron-app
+productName: 图片压缩小工具
 directories:
   buildResources: build
 files:
@@ -8,10 +8,12 @@ files:
   - '!electron.vite.config.{js,ts,mjs,cjs}'
   - '!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
   - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!scripts/*'
 asarUnpack:
   - resources/**
 win:
-  executableName: electron-app
+  executableName: electron-vite-react-app
+  icon: resources/icon.png
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
@@ -25,6 +27,8 @@ mac:
     - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
     - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
   notarize: false
+  icon: resources/icon.png
+  identity: null
 dmg:
   artifactName: ${name}-${version}.${ext}
 linux:
@@ -34,6 +38,7 @@ linux:
     - deb
   maintainer: electronjs.org
   category: Utility
+  icon: resources/icon.png
 appImage:
   artifactName: ${name}-${version}.${ext}
 npmRebuild: false

@@ -9,7 +9,7 @@
     "format": "prettier --write .",
     "lint": "eslint --cache .",
     "start": "electron-vite preview",
-    "dev": "electron-vite dev",
+    "dev": "node scripts/pre_dev.mjs && electron-vite dev",
     "build": "electron-vite build",
     "postinstall": "electron-builder install-app-deps",
     "build:unpack": "npm run build && electron-builder --dir",
@@ -21,7 +21,9 @@
     "@electron-toolkit/preload": "^3.0.2",
     "@electron-toolkit/utils": "^4.0.0",
     "antd": "^5.26.6",
-    "electron-updater": "^6.3.9"
+    "electron-updater": "^6.3.9",
+    "react-router-dom": "^7.7.1",
+    "sharp": "^0.34.3"
   },
   "devDependencies": {
     "@ant-design/v5-patch-for-react-19": "^1.0.3",

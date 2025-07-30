@@ -1,4 +1,4 @@
-# electron-app
+# 图片压缩小工具
 
 An Electron application with React
 
