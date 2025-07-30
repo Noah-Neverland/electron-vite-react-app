@@ -1,4 +1,4 @@
-name: Build/图片压缩小工具
+name: Build/release Electron app
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 22
+          node-version: 16
 
       - name: Install Dependencies
         run: npm install
