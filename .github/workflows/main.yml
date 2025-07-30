@@ -1,4 +1,4 @@
-name: Build/release Electron app
+name: Build/图片压缩小工具
 
 on:
   push:
