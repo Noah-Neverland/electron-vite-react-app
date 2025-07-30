@@ -1,4 +1,4 @@
-appId: com.electron.app
+appId: com.rabbit.imagecompressor.app
 productName: 图片压缩小工具
 directories:
   buildResources: build
@@ -12,13 +12,22 @@ files:
 asarUnpack:
   - resources/**
 win:
+  # exe文件名
   executableName: electron-vite-react-app
   icon: resources/icon.png
 nsis:
+  # 安装程序文件名
   artifactName: ${name}-${version}-setup.${ext}
+  # 桌面快捷方式名称
   shortcutName: ${productName}
+  # Windows “程序和功能” 写在列表里显示的名字
   uninstallDisplayName: ${productName}
+  # 是否在桌面快捷方式，always=始终创建，never=不创建，prompt=询问用户
   createDesktopShortcut: always
+  # 是否允许用户自定义安装路径
+  allowToChangeInstallationDirectory: true
+  # “一键安装”还是“向导模式”
+  oneClick: false
 mac:
   entitlementsInherit: build/entitlements.mac.plist
   extendInfo:
